@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IntrinsicSizeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="233" verticalCompressionResistancePriority="800" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="BTa-1b-SFQ">
+                                <rect key="frame" x="0.0" y="30" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.94192713499069214" green="0.92818957567214966" blue="0.75262892246246338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8px-hr-T9D">
+                                <rect key="frame" x="0.0" y="597" width="375" height="29"/>
+                                <segments>
+                                    <segment title="Phone"/>
+                                    <segment title="Message"/>
+                                    <segment title="Paragaph"/>
+                                    <segment title="Essay"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleValueChangeWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="fAK-Lu-3mG"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BTa-1b-SFQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="27g-cD-GZc"/>
+                            <constraint firstAttribute="trailing" secondItem="BTa-1b-SFQ" secondAttribute="trailing" id="2nE-DV-baN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8px-hr-T9D" secondAttribute="bottom" constant="42" id="Bn2-C0-Esm"/>
+                            <constraint firstItem="8px-hr-T9D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UBD-AW-nsP"/>
+                            <constraint firstAttribute="trailing" secondItem="8px-hr-T9D" secondAttribute="trailing" id="YMi-Qv-S5p"/>
+                            <constraint firstItem="BTa-1b-SFQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wwM-SP-2Un"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="BTa-1b-SFQ" id="kK6-cs-WCf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
